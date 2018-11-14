@@ -12,13 +12,15 @@ class Api::V1::PlansController < ApplicationController
   end
 
   def batch_update
-    params[:plan].each { |plan|
+    @plans = params[:plan].map { |plan|
         @plan = Plan.find(plan[:plan_id])
         @plan.update(start_time: plan[:start_time])
         @plan.update(end_time: plan[:end_time])
         @plan.update(note: plan[:note])
         @plan.update(location_name: plan[:location_name])
+        @plan
     }
+     render json: @plans
   end
 
   private
