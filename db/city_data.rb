@@ -1,6 +1,4 @@
-module CityCode
-
-CITYDATA = {"citiesCode": [
+city_data = {"citiesCode": [
   {
     "id": "city:1",
     "name": "London",
@@ -46602,5 +46600,3 @@ CITYDATA = {"citiesCode": [
     "country_id": "country:78"
   }]
 }
-
-end
