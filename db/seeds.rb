@@ -12,6 +12,6 @@ require_relative "./city_data.rb"
 
 # response = HTTParty.get('http://localhost:4001/citiesCode')
 
-city_data["citiesCode"].each do |citycode|
+CityCode::CITYDATA["citiesCode"].each do |citycode|
   Code.create(city_code: citycode["id"], city_name: citycode["name"], country_id: citycode["country_id"])
 end
