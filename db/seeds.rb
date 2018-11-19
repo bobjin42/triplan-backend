@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'rubygems'
 require 'httparty'
-require "./city_data.rb"
+require_relative "./city_data.rb"
 
 
 # response = HTTParty.get('http://localhost:4001/citiesCode')
