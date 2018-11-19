@@ -46598,6 +46598,5 @@ city_data = {"citiesCode": [
     "id": "city:6138",
     "name": "Zhaodong",
     "country_id": "country:78"
-  }
-]
+  }]
 }
