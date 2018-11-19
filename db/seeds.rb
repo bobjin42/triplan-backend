@@ -7,17 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'rubygems'
 require 'httparty'
+require_relative "./city_data.rb"
 
-# response = HTTParty.get('http://localhost:4000/places')
-#
-# response.each do |location|
-#   Location.create(api_id: location["id"], lat: location["location"]["lat"], lng: location["location"]["lng"], name: location["name"], name_suffix: location["name_suffix"], url: location["url"], categories: location["categories"], perex: location["perex"], thumbnail_url: location["thumbnail_url"], rating: location["rating"])
-# end
-#
-# puts Allcode.get_city_code.first
 
-response = HTTParty.get('http://localhost:4001/citiesCode')
+# response = HTTParty.get('http://localhost:4001/citiesCode')
 
-response.each do |citycode|
+city_data["citiesCode"].each do |citycode|
   Code.create(city_code: citycode["id"], city_name: citycode["name"], country_id: citycode["country_id"])
 end
