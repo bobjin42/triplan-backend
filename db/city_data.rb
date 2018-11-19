@@ -1,4 +1,4 @@
-citydata = {"citiesCode": [
+city_data = {"citiesCode": [
   {
     "id": "city:1",
     "name": "London",
